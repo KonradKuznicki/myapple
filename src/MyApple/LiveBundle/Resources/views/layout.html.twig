@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>{% block title %}Live Demo Admin{% endblock %}</title>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Syncopate|Lekton">
+		{% block style %}<link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}">{% endblock %}
+		<script src="{{ asset('js/ObjectToXML.js') }}" type="text/javascript"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="body">
+			{% block body %}{% endblock %}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+{% extends 'MyAppleLiveBundle::layout.html.twig' %}
+
+{% block body %}
+	
+	<script src="{{ asset('js/stats.js') }}" type="text/javascript"></script>
+	
+	<script>
+		
+		stats.link_server = "{{path('ajax_stats')}}";
+		stats.link_nginx = "/Admin/AJAX/nginx"; //"{{asset('nginx.txt')}}";
+	
+	</script>
+	
+	{% include 'MyAppleLiveBundle::navigation.html.twig' %}
+	
+	<div id="stats">
+		
+		<h1>
+			Statystyki serwera:
+		</h1>
+		
+		<h2>
+			Całkowite zużycie zasobów:
+		</h2
+		
+		<div>
+			RAM: <span id="ram"></span><br>
+			CPU: <span id="cpu"></span><br>
+			TRAFFIC IN: <span id="traffic_in"></span><br>
+			TRAFFIC OUT: <span id="traffic_out"></span><br>
+		</div>
+		
+		
+		<h2>
+			Statysyki nginx:
+		</h2>
+		
+		<div id="nginx"><pre></pre></div>
+		
+		<div id="procesy">
+		
+			<h2>
+				Procesy, sortuj po <a href="javascript: stats.sort_order='cpu';">CPU</a>|<a href="javascript: stats.sort_order='ram';">RAM</a>(zmiana trwa do sekundy)
+			</h2>
+			
+			<table>
+				<thead>
+					<tr>
+						<th>CPU</th>
+						<th>RAM</th>
+						<th>Proces</th>
+					</tr>
+				<thead>
+				<tbody></tbody>
+			</table>
+		
+		</div>
+	
+	
+	</div>
+{% endblock %}

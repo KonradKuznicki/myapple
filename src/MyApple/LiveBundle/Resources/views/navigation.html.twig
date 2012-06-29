@@ -1,0 +1,21 @@
+{% if is_granted('ROLE_MODERATOR') %}
+<div id="navigation">
+	<ul>
+		{% if not(current('home')) %}
+			<li>
+				<a href="{{ path('home') }}" target="_blank">Wpisy</a>
+			</li>
+		{% endif %}
+	
+		{% if not(current('stats')) %}
+			<li>
+				<a href="{{ path('stats') }}" target="_blank">Statystyki</a>
+			</li>
+		{% endif %}
+
+		<li>
+			<a href="{{ path('logout') }}">Wyloguj</a>
+		</li>
+	</ul>
+</div>
+{% endif %}

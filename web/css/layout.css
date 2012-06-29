@@ -1,0 +1,126 @@
+@CHARSET "UTF-8";
+
+
+/**
+* lepiej użyć serwerowego SSI lub ESI o ile jest dostępne
+*/
+@import url("login.css");
+
+#procesy>table td {
+	width: 80px;
+}
+
+h1
+{
+	font-family: 'Syncopate', serif;
+	font-size: 25px;
+	text-shadow: 4px 4px 4px #aaa;
+	margin-bottom: 30px;
+	font-weight: normal;
+}
+
+h2
+{
+	font-size: 20px;
+	text-shadow: 4px 4px 4px #aaa;
+	margin-bottom: 30px;
+	font-weight: normal;
+}
+
+a
+{
+	color: red;
+	text-decoration: none;	
+}
+
+a:hover
+{
+	text-shadow: 1px 1px 1px #aaa;
+}
+
+#body
+{
+	font-size: 22px;	
+	/*font-family: 'Josefin Sans', serif;*/	
+	/*font-family: 'Cantarell', serif;*/	
+	font-family: 'Lekton', serif;
+	text-shadow: 2px 2px 2px #bbb;
+}
+
+#dodaj
+{
+	position: fixed;
+	left: 10px;
+	top: 0px;
+	width: 320px;
+}
+
+#dodaj label
+{
+	display: block;
+}
+
+
+#login [type=submit], [type=submit]
+{
+	padding-left: 10px;	
+	cursor: pointer;	
+	font-family: 'Lekton', serif;	
+	font-size: 22px;
+	width: 210px;	
+	border: none;
+	
+	margin-top: 20px;
+	width: 120px;
+	background-color: white;
+	text-shadow: 3px 3px 3px #aaa;	
+	
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;	
+	color: #000000;	
+}
+
+#save {
+	text-align: right;
+}
+
+#stack {
+	margin-left: 400px;
+}
+
+#login [type=submit]:hover, [type=submit]:hover
+{
+	text-shadow: 3px 3px 3px #77aaff;
+}
+
+#form ul {
+	color: red;
+}
+
+textarea {
+	width: 300px;	
+	height: 80px;
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+
+#navigation li {
+	display: inline;
+}
+
+#stats h2 span {
+	cursor: pointer;
+}
+
+.anime
+{
+		/* Firefox */
+		-moz-transition: all .2s ease;
+		/* WebKit */
+		-webkit-transition: all .2s ease;
+		/* Opera */
+		-o-transition: all .2s ease;
+		/* Standard */
+		transition: all .2s ease;	
+}

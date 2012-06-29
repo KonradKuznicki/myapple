@@ -1,0 +1,30 @@
+{% extends 'MyAppleLiveBundle::layout.html.twig' %}
+
+{% block body %}
+<div id="login">
+<h1>
+	Wymagane logowanie:
+</h1>
+
+	{% if error %}
+		<div class="error">{{ error.message | trans }}</div>
+	{% endif %}
+
+	<form action="{{ path('login_check') }}" method="post">
+		<span>
+			<label for="username">Login:</label>
+			<input type="text" id="username" name="_username" value="{{ last_username }}" class="anime" />
+		</span>
+		
+		<span>
+			<label for="password">Hasło:</label>
+			<input type="password" id="password" name="_password" class="anime" />
+		</span>
+		
+		<div>
+			<input type="submit" name="login" value="Zaloguj -&gt;" class="anime"/>
+		</div>
+		
+	</form>
+</div>
+{% endblock %}

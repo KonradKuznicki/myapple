@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Live Demo</title>
+    </head>
+    <body>
+		<script>
+
+function makeIt () {
+	try { 
+		
+		xmlParser = new DOMParser();
+
+		xmlxml = xmlParser.parseFromString(document.getElementById("xml").value, "text/xml");
+		xmlxslt = xmlParser.parseFromString(document.getElementById("xslt").value, "text/xml");
+		
+		XSLTProcessor = new XSLTProcessor();
+
+		XSLTProcessor.importStylesheet(xmlxslt);
+
+		TransformResults = XSLTProcessor.transformToFragment(xmlxml, document);
+
+		if(!TransformResults) return ("ichuj");
+
+		document.getElementById("wynik").value = TransformResults;
+
+	}
+	catch(err) 
+	{
+		alert(err.message);
+	}
+
+}
+
+		</script>
+		xml
+		<textarea id="xml" style="width: 100%; height: 300px;"></textarea>
+		
+		xslt
+		<textarea id="xslt"  style="width: 100%; height: 300px;"></textarea>
+		
+		<button onclick="makeIt()">test</button>
+		
+		<textarea id="wynik" style="width: 100%; height: 300px;"></textarea>
+	
+
+    </body>
+</html>

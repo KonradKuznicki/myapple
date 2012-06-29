@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+
+form[name=photo] {
+	display: none;
+}
+
+#uploaded_photo, #swfupload_container {
+	text-align: center;
+}
+
+#uploaded_photo .image {
+	display: inline-block;
+	position: relative;
+}
+
+#uploaded_photo .image span {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: #0C0C0B;
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer;
+	display: block;
+	height: 14px;
+	width: 14px;
+	line-height: 14px;
+	overflow: hidden;
+	border-bottom-left-radius: 5px;
+	-moz-box-shadow: 0 0 5px 0px #0C0C0B;
+	-webkit-box-shadow: 0 0 5px 0px #0C0C0B;
+	box-shadow: 0 0 5px 0px #0C0C0B;
+}
+
+#dodaj {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100px;
+}
+
+
+#dodaj .entry {
+	position: relative;
+	margin: 0 auto;
+	-moz-box-shadow: 0 0 5px 15px #0C0C0B;
+	-webkit-box-shadow: 0 0 5px 15px #0C0C0B;
+	box-shadow: 0 0 5px 15px #0C0C0B;
+}
+
+
+#body {
+	width: 596px;
+}
+
+
+#stack {
+	margin-top: 170px;
+}
+
+
+#entry>div
+{
+	text-align: center;	
+}
+
+#dodaj .entry textarea {
+	width: 566px;
+	margin: 10px 0px;
+	height: 30px;
+	color: #9E9E9E;
+	outline: none;
+	font-family: 'Lucida Grande';
+	font-size: 12px;
+	background: none;
+	border: none;
+	padding: 0px;
+	overflow: hidden;
+}
+
+#dodaj ul {
+		
+}
+
+#dodaj ul li {
+	display: inline-block;
+	width: 45%;
+	text-align: center;
+}
+
+
+#dodaj ul li a {
+	color: white;
+	text-decoration: none;
+}
+
+#dodaj ul li a:hover {
+	text-decoration: underline;	
+}
+
+#save {
+	text-align: right;
+}
+
+
+.entry .outline .topeffect {
+	width: 594px;
+}

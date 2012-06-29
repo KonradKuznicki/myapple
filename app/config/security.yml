@@ -1,0 +1,43 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        in_memory:
+            users:
+                mod1: { password: mod1, roles: [ 'ROLE_MODERATOR' ] }
+                mod2: { password: mod2, roles: [ 'ROLE_MODERATOR' ] }
+                mod3: { password: mod3, roles: [ 'ROLE_MODERATOR' ] }
+
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        test:
+            pattern: ^/Admin/AJAX/photo
+            security: false
+
+        login:
+            pattern:  ^/Admin/login$
+            security: false
+
+        secured_area:
+            pattern:    ^/Admin
+            form_login:
+                check_path: /Admin/login_check
+                login_path: /Admin/login
+            logout:
+                path:   /Admin/logout
+                target: /Admin
+            #anonymous: ~
+            #http_basic:
+            #    realm: "Secured Demo Area"
+
+    access_control:
+        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        #- { path: ^/Admin/AJAX/photo, roles: IS_AUTHENTICATED_ANONYMOUSLY}

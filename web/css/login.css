@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+
+#login
+{
+	width: 450px;
+	margin: 0 auto;
+}
+
+#login form
+{
+	margin-top: 10px;
+}
+
+#login label
+{
+	padding-left: 5px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+#login .error
+{
+	color: red;
+}
+
+#login span
+{
+	display: inline-block;
+	width: 215px;
+}
+
+#login div
+{
+	margin: 15px;
+	text-align: right;
+}
+
+#login input, textarea
+{
+	padding-left: 10px;	
+	cursor: pointer;	
+	font-family: 'Lekton', serif;	
+	font-size: 22px;
+	width: 210px;
+	
+	border: 1px solid #eeeeee;	
+	
+	-moz-box-shadow: 3px 3px 3px  -2px #aaaaaa;
+	-webkit-box-shadow: 3px 3px 3px -2px #aaaaaa;
+	box-shadow: 3px 3px 3px -2px #aaaaaa;
+	border-radius: 5px;
+	
+	outline: none; 
+	
+	
+}
+
+#login input[type=text]:hover,#login input[type=password]:hover, textarea:hover
+{
+	border: 1px solid #ddffff;
+	-moz-box-shadow: 3px 3px 3px  -2px #77aaff;
+	-webkit-box-shadow: 3px 3px 3px -2px #77aaff;
+	box-shadow: 3px 3px 3px -2px #77aaff;	
+}
+
+#login input[type=text]:focus,#login input[type=password]:focus, textarea:focus
+{
+	border: 1px solid #ddddff;	
+	-moz-box-shadow: 3px 3px 3px  -2px #7777ff;
+	-webkit-box-shadow: 3px 3px 3px -2px #7777ff;
+	box-shadow: 3px 3px 3px -2px #7777ff;	
+}

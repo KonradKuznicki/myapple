@@ -1,0 +1,23 @@
+# wycięsie vim swapów
+*.swp
+*.swo
+
+.DS_store
+
+# wycięcie logów i cacha z synchronizacji symfony
+app/cache/*
+app/logs/*
+
+#
+web/entries/*
+web/photos/*
+web/counter
+
+# od konfiguracji nginxa 
+nginx/name.txt
+nginx/log/*
+
+nginx
+
+# aby dał osię dodać katalogi musi być w nich jakiś plik choćby README w tórym będzie opisane po co jest on potrzebny
+!README
